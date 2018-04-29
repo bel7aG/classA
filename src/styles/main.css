@@ -1,0 +1,62 @@
+@font-face {
+  font-family: cubano;
+  src: url(../fonts/cubano.ttf); }
+
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-size: 62.5%; }
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  font-size: 1.6rem; }
+
+* {
+  padding: 10;
+  margin: 0; }
+
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul, li {
+  list-style-type: none; }
+
+img {
+  display: inline-block;
+  vertical-align: center; }
+
+.header {
+  display: block; }
+
+.Header {
+  z-index: 10;
+  padding: 1.3rem 0;
+  color: rgba(235, 235, 255, 0.8);
+  background-color: #24292e; }
+
+.position-relative {
+  position: relative !important; }
+
+.display-flex {
+  display: flex !important; }
+
+.flex-justify-between {
+  justify-content: space-between !important; }
+
+.padding-x-3 {
+  padding: 0 16px; }
+
+.container-g {
+  max-width: 1012px;
+  margin: 0 auto; }
+
+.f5 {
+  font-size: 14px !important; }
