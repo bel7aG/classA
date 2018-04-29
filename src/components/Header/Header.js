@@ -4,7 +4,7 @@ import logo from './../../icons/bel7aG.svg';
 const Header = () => (
   <div className="position-relative header">
     <header className="Header">
-      <div className="display-flex padding-x-3 container-g">
+      <div className="display-flex px-3 container-g">
         <div className="display-flex logo-box">
           <img src={logo} className="logo"/>
         </div>
@@ -24,11 +24,23 @@ const Header = () => (
               </form>
             </div>
 
+            <ul className="display-flex pl-2 flex-items-center text-bold list-items">
+              <li className="px-3 list-item">
+                <a href="#">Home</a>
+              </li>
+              <li className="px-3 list-item">
+                <a href="#">About</a>
+              </li>
+              <li className="px-3 list-item">
+                <a href="#">Article</a>
+              </li>
+              <li className="px-3 list-item">
+                <a href="#">Design</a>
+              </li>
+            </ul>
+
           </div>
 
-          <div className="display-flex">
-
-          </div>
         </div>
       </div>
     </header>
