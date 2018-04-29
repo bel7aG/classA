@@ -1,7 +1,3 @@
-.header {
-  display: block;
-}
-
 .Header {
   z-index: 10;
   padding: 1.3rem 0;
@@ -9,6 +5,47 @@
   background-color: #24292e;
 
   .logo-box {
+    padding-right: 9px;
+  }
 
+  .header-search {
+    font-size: 1.4rem;
+    width: 300px;
+
+    form {
+      height: 100%;
+    }
+
+    .header-search-wrapper {
+      display: table;
+      width: 100%;
+      max-width: 100%;
+      position: absolute;
+      padding: 0 1rem;
+      top: 50%;
+      background-color: rgba(255, 255, 255, .05);
+      transform: translateY(-50%);
+
+      .header-search-input {
+        border: 0;
+        width: 100%;
+        height: 32px;
+        background-color: transparent;
+        color: white;
+
+        &:focus {
+          color: white;
+          transition: all 0.17s;
+          padding: 2rem 0;
+          letter-spacing: 1px;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.08);
+            letter-spacing: 0.4rem;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
   }
 }
