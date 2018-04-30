@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import logo from './../../icons/bel7aG.svg';
-
+import { BrowserRouter, Router, Link, Switch } from 'react-router-dom';
 const Header = () => (
   <div className="position-relative header">
     <header className="Header">
@@ -18,29 +18,26 @@ const Header = () => (
                     type="text"
                     className="form-control header-search-input"
                     placeholder="search smokers"
-                    autocapitalize="off"
                   />
                 </label>
               </form>
             </div>
 
             <ul className="display-flex pl-2 flex-items-center text-bold list-items">
-              <li className="px-3 list-item">
-                <a href="#">Home</a>
+              <li className="px-3 py-3 list-item">
+                <Link to="/">Home</Link>
               </li>
-              <li className="px-3 list-item">
-                <a href="#">About</a>
+              <li className="px-3 py-3 list-item">
+                <Link to="/About">About</Link>
               </li>
-              <li className="px-3 list-item">
-                <a href="#">Article</a>
+              <li className="px-3 py-3 list-item">
+                <Link to="/Article">Article</Link>
               </li>
-              <li className="px-3 list-item">
-                <a href="#">Design</a>
+              <li className="px-3 py-3 list-item">
+                <Link to="Design">Design</Link>
               </li>
             </ul>
-
           </div>
-
         </div>
       </div>
     </header>

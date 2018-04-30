@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import './styles/main.css';
 
+
 class App extends Component {
   render() {
     return (
