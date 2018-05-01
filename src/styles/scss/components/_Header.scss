@@ -1,9 +1,25 @@
+.header {
+  border-bottom: 2.1px solid #a7a2a2;
+  box-shadow: 0 0.4rem 2rem rgba(#000, .32);
+  transition: all 0.17s;
+  height: 74px;
+
+  &:hover {
+    box-shadow: 0 0.1rem 0.1rem rgba(#000, .81);
+  }
+
+  &:hover *:not(header):not(:hover:not(.o)) {}
+}
+
 .Header {
   z-index: 1;
   padding: 1.3rem 0;
   color: rgba(235, 235, 255, .8);
   background-color: #20232a;
-
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 
   .logo-box {
     padding-right: 18px;
@@ -28,12 +44,11 @@
       transform: translateY(-50%);
 
       .header-search-input {
-        border: 0;
         width: 100%;
         height: 32px;
         background-color: transparent;
         color: white;
-        transition: all .6s;
+        transition: all 0.6s;
 
         &:focus {
           color: white;
@@ -57,11 +72,11 @@
     &:first-child {
       margin-left: 2rem;
     }
+    padding: 1rem;
     transition: all 0.2s;
-    display: block;
 
     &:hover {
-      font-family: cubano;
+      font-family: inherit;
       color: white;
       letter-spacing: 0.2rem;
       font-size: 1.9rem;
@@ -73,35 +88,55 @@
       animation-iteration-count: infinite;
     }
 
-
-
     &:active {
       transition: all 110ms;
-      text-shadow: 0 0 0rem transparent;
+      text-shadow: 0 0 0 transparent;
       transform: scale(.951) translateY(2px);
       color: inherit;
     }
   }
+
   &:hover li:not(:hover) {
     text-shadow: 0 0 1rem rgba(#fff, .7);
     animation-name: not-list;
-    animation-duration: .7s;
+    animation-duration: 0.7s;
     animation-iteration-count: infinite;
   }
 }
-
 @keyframes not-list {
   0% {
     color: rgba(#FFFFFF, .07);
     transform: skewY(15deg);
   }
+
   50% {
     color: rgba(#FFFFFF, .45);
     transform: skewY(-15deg);
-
   }
+
   100% {
     color: rgba(#FFFFFF, .07);
     transform: skewY(15deg);
+  }
+}
+
+.nav-active {
+  font-size: 2.1rem;
+  text-shadow: 1px 1px 0 #000;
+  animation-name: active-one;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes active-one {
+  0% {
+    color: #fff;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+
+  100% {
+    color: #fff;
   }
 }

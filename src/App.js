@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import './styles/main.css';
-
+import AppRouter from "./routers/AppRouter";
 
 class App extends Component {
   render() {
@@ -13,4 +13,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export{ App as default, AppRouter };

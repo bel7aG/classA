@@ -37,7 +37,12 @@ img {
   vertical-align: center; }
 
 input {
+  border: 0;
   font-family: cubano; }
+
+body {
+  background-color: #ffffff;
+  color: #212121; }
 
 .form-control {
   line-height: 2rem;
@@ -84,11 +89,23 @@ input {
 .f5 {
   font-size: 14px !important; }
 
+.header {
+  border-bottom: 2.1px solid #a7a2a2;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.32);
+  transition: all 0.17s;
+  height: 74px; }
+  .header:hover {
+    box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.81); }
+
 .Header {
   z-index: 1;
   padding: 1.3rem 0;
   color: rgba(235, 235, 255, 0.8);
-  background-color: #20232a; }
+  background-color: #20232a;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
   .Header .logo-box {
     padding-right: 18px; }
   .Header .header-search {
@@ -106,12 +123,11 @@ input {
       background-color: rgba(255, 255, 255, 0.05);
       transform: translateY(-50%); }
       .Header .header-search .header-search-wrapper .header-search-input {
-        border: 0;
         width: 100%;
         height: 32px;
         background-color: transparent;
         color: white;
-        transition: all .6s; }
+        transition: all 0.6s; }
         .Header .header-search .header-search-wrapper .header-search-input:focus {
           color: white;
           transition: all 0.3s;
@@ -123,12 +139,12 @@ input {
             transition: all 0.3s; }
 
 .list-items .list-item {
-  transition: all 0.2s;
-  display: block; }
+  padding: 1rem;
+  transition: all 0.2s; }
   .list-items .list-item:first-child {
     margin-left: 2rem; }
   .list-items .list-item:hover {
-    font-family: cubano;
+    font-family: inherit;
     color: white;
     letter-spacing: 0.2rem;
     font-size: 1.9rem;
@@ -140,14 +156,14 @@ input {
     animation-iteration-count: infinite; }
   .list-items .list-item:active {
     transition: all 110ms;
-    text-shadow: 0 0 0rem transparent;
+    text-shadow: 0 0 0 transparent;
     transform: scale(0.951) translateY(2px);
     color: inherit; }
 
 .list-items:hover li:not(:hover) {
   text-shadow: 0 0 1rem rgba(255, 255, 255, 0.7);
   animation-name: not-list;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   animation-iteration-count: infinite; }
 
 @keyframes not-list {
@@ -160,3 +176,18 @@ input {
   100% {
     color: rgba(255, 255, 255, 0.07);
     transform: skewY(15deg); } }
+
+.nav-active {
+  font-size: 2.1rem;
+  text-shadow: 1px 1px 0 #000;
+  animation-name: active-one;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite; }
+
+@keyframes active-one {
+  0% {
+    color: #fff; }
+  50% {
+    opacity: 0.35; }
+  100% {
+    color: #fff; } }
