@@ -1,0 +1,38 @@
+@keyframes not-list {
+  0% {
+    color: rgba(#FFFFFF, .07);
+    transform: skewY(15deg);
+  }
+
+  50% {
+    color: rgba(#FFFFFF, .45);
+    transform: skewY(-15deg);
+  }
+
+  100% {
+    color: rgba(#FFFFFF, .07);
+    transform: skewY(15deg);
+  }
+}
+
+
+@keyframes border-bottom-animation {
+  0% {
+    color: #0e90e8;
+    border-bottom: 2px solid rgba(#0e90e8, .8);
+    border-bottom-left-radius: 10px;
+  }
+
+  50% {
+    color: rgba(#fff, .4);
+    border-bottom: 2px solid rgba(#ff0000, .3);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  100% {
+    color: #0e90e8;
+    border-bottom: 2px solid rgba(#0e90e8, .8);
+    border-bottom-left-radius: 10px;
+  }
+}

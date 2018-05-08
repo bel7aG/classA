@@ -34,9 +34,6 @@ const Header = () => (
                 <NavLink to="/About" activeClassName="nav-active" exact>About</NavLink>
               </li>
               <li className="px-3 py-3 list-item">
-                <NavLink to="/EditSmoker" activeClassName="nav-active" exact>Edit</NavLink>
-              </li>
-              <li className="px-3 py-3 list-item">
                 <NavLink to="/Design" activeClassName="nav-active" exact>Design</NavLink>
               </li>
             </ul>

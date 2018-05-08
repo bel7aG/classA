@@ -1,14 +1,13 @@
 .header {
-  border-bottom: 2.1px solid #a7a2a2;
   box-shadow: 0 0.4rem 2rem rgba(#000, .32);
   transition: all 0.17s;
-  height: 74px;
+  height: 94px;
 
   &:hover {
     box-shadow: 0 0.1rem 0.1rem rgba(#000, .81);
   }
 
-  &:hover *:not(header):not(:hover:not(.o)) {}
+  // &:hover *:not(header):not(:hover:not(.o)) {}
 }
 
 .Header {
@@ -22,7 +21,7 @@
   left: 0;
 
   .logo-box {
-    padding-right: 18px;
+    padding-right: 2.2rem;
   }
 
   .header-search {
@@ -42,6 +41,9 @@
       top: 50%;
       background-color: rgba(255, 255, 255, .05);
       transform: translateY(-50%);
+      animation-name: border-bottom-animation;
+      animation-duration: 1.2s;
+      animation-iteration-count: infinite;
 
       .header-search-input {
         width: 100%;
@@ -72,7 +74,7 @@
     &:first-child {
       margin-left: 2rem;
     }
-    padding: 1rem;
+    padding: 0 1.4rem;
     transition: all 0.2s;
 
     &:hover {
@@ -83,15 +85,12 @@
       text-shadow: 0 0.7rem 0.4rem rgba(92, 92, 92, .8);
       transform: scale(1.11);
       font-weight: 0;
-      animation-name: list;
-      animation-duration: 1s;
-      animation-iteration-count: infinite;
     }
 
     &:active {
       transition: all 110ms;
       text-shadow: 0 0 0 transparent;
-      transform: scale(.951) translateY(2px);
+      transform: scale(.951) translateY(2px) !important;
       color: inherit;
     }
   }
@@ -99,44 +98,30 @@
   &:hover li:not(:hover) {
     text-shadow: 0 0 1rem rgba(#fff, .7);
     animation-name: not-list;
-    animation-duration: 0.7s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
-  }
-}
-@keyframes not-list {
-  0% {
-    color: rgba(#FFFFFF, .07);
-    transform: skewY(15deg);
-  }
-
-  50% {
-    color: rgba(#FFFFFF, .45);
-    transform: skewY(-15deg);
-  }
-
-  100% {
-    color: rgba(#FFFFFF, .07);
-    transform: skewY(15deg);
   }
 }
 
 .nav-active {
+  padding-bottom: 1rem;
   font-size: 2.1rem;
   text-shadow: 1px 1px 0 #000;
-  animation-name: active-one;
-  animation-duration: 1.2s;
+  animation-name: border-bottom-animation;
+  animation-duration: .86s;
   animation-iteration-count: infinite;
-}
-@keyframes active-one {
-  0% {
-    color: #fff;
-  }
+  transition: all .31s;
 
-  50% {
-    opacity: 0.35;
-  }
-
-  100% {
-    color: #fff;
+  &:hover {
+    font-size: 1.67rem;
+    color: rgba(#0e90e8, .3);
+    &::after {
+      font-size: 10px;
+      text-decoration: none;
+      letter-spacing: -.5px;
+      content: "(Opened)";
+      color: rgba(#00ee5f, 0.82);
+      white-space: pre;
+    }
   }
 }

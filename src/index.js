@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App, { AppRouter } from './App';
+import { AppRouter } from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 
